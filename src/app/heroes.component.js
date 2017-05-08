@@ -18,8 +18,9 @@ router_1.RouterModule.forRoot([
     }
 ]);
 var HeroesComponent = (function () {
-    function HeroesComponent(heroService) {
+    function HeroesComponent(heroService, router) {
         this.heroService = heroService;
+        this.router = router;
     }
     HeroesComponent.prototype.ngOnInit = function () {
         this.getHeroes();
@@ -42,7 +43,8 @@ HeroesComponent = __decorate([
         templateUrl: './heroes.component.html',
         styleUrls: ['./heroes.component.css']
     }),
-    __metadata("design:paramtypes", [hero_service_1.HeroService])
+    __metadata("design:paramtypes", [hero_service_1.HeroService,
+        router_1.Router])
 ], HeroesComponent);
 exports.HeroesComponent = HeroesComponent;
 //# sourceMappingURL=heroes.component.js.map
